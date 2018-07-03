@@ -13,8 +13,7 @@ class MenuController
         puts "2 - Create an entry"
         puts "3 - Search for an entry"
         puts "4 - Import entries from a CSV"
-        puts "5 - Delete all entries"
-        puts "6 - Exit"
+        puts "5 - Exit"
         print "Enter your selection: "
 
         selection = gets.to_i
@@ -36,12 +35,7 @@ class MenuController
                 system "clear"
                 read_csv
                 main_menu
-              when 5
-                system "clear"
-                @address_book.delete_all_entries
-                puts "All entries removed"
-                main_menu
-            when 6
+            when 5
                 system "clear"
                 puts "Good-bye!"
                 exit(0)
