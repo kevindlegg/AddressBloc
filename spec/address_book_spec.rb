@@ -133,4 +133,14 @@ RSpec.describe AddressBook do
         end
 
     end
+
+    describe "#delete_all_entries" do
+      it "deletes all entries from AddressBook" do
+        book.import_from_csv("entries.csv")
+        book.delete_all_entries
+
+        expect(book.entries.size).to eq 0
+      end
+    end
+
 end
